@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>TheNetNinja Angular Playlist</title>
-    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
+<html lang="en" ng-app="ninja">
 
-  </body>
+<head>
+  <title>TheNetNinja Angular Playlist</title>
+  <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="public/lib/angular.min.js"></script>
+  <script type="text/javascript" src="public/lib/angular-route.min.js"></script>
+
+  </script>
+  <script type="text/javascript" src="public/app.js"></script>
+</head>
+<!-- Body section is under controlled by ninjaController -->
+
+<body>
+  <ng-include src="'header.html'"></ng-include>
+  <main ng-view></main>
+
+</body>
+
 </html>

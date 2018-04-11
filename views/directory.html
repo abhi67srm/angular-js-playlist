@@ -1,0 +1,25 @@
+<div class="content">
+  <!--Going to remove ninja controller because in routing we mentioned it -->
+  <!--<div ng-controller="ninjaController">-->
+    <button type="button" ng-click="order = 'name'">Order by name</button>
+    <button type="button" ng-click="order= 'belt'">Order by belt</button>
+
+    <input type="text" ng-model="search">
+    <ul>
+      <li ng-repeat="ninja in ninjas | orderBy: order | filter:search" ng-show="ninja.available">
+        <img ng-src="{{ninja.thumb}}" alt="ninja_img" style="margin: -12px 10px 0 0; float: left; width: 50px" ng-show="ninja.thumb">
+        <h3> {{ninja.name}}- {{ninja.rate  | currency}} </h3>
+        <div class="remove" ng-click="removeNinja(ninja)">x</div>
+        <span class="belt" style="background: {{ninja.belt}}">{{ninja.belt}} belt</span>
+
+      </li>
+
+    </ul>
+    <form ng-submit="addNinja()" />
+    <input type="text" ng-model="newninja.name" placeholder="ninja_name" />
+    <input type="text" ng-model="newninja.rate" placeholder="ninja_rate" />
+    <input type="text" ng-model="newninja.belt" placeholder="ninja_belt_color" />
+    <input type="submit" value="submit new ninja" />
+    </form>
+  <!--</div> -->
+</div>
